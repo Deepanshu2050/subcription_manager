@@ -187,6 +187,23 @@ expense-subscription-manager/
    
    Open your browser and navigate to http://localhost:3000
 
+## 🔧 Troubleshooting
+
+### Common Issues
+
+1.  **Connection Refused (frontend or backend not loading)**
+    *   Ensure **both** servers are running. You need two terminal windows:
+        *   Terminal 1 (Backend): `cd backend && npm run dev` (Runs on port 5001)
+        *   Terminal 2 (Frontend): `cd frontend && npm run dev` (Runs on port 3000)
+
+2.  **MongoDB Connection Error**
+    *   If you see `Could not connect to any servers in your MongoDB Atlas cluster...`, your IP address might not be whitelisted.
+    *   Go to MongoDB Atlas -> Network Access -> Add IP Address -> Add Current IP Address.
+
+3.  **Login Failed / Demo Credentials Not Working**
+    *   If "Demo Credentials" fail, it means the user `test@example.com` does not exist in your database.
+    *   **Solution**: Use the **Sign Up** page to create a new account. You can then log in with those credentials.
+
 ## 📖 API Documentation
 
 ### Authentication Endpoints
