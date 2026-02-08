@@ -107,7 +107,7 @@ const Signup = () => {
                                     autoComplete="name"
                                     required
                                     className="input pl-10"
-                                    placeholder="John Doe"
+                                    placeholder="Full Name"
                                     value={formData.name}
                                     onChange={handleChange}
                                 />
