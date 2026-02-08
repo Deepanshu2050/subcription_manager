@@ -23,12 +23,7 @@ const Login = () => {
         setError('');
     };
 
-    const handleDemoLogin = () => {
-        setFormData({
-            email: 'test@example.com',
-            password: 'password123',
-        });
-    };
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -145,16 +140,7 @@ const Login = () => {
                         </button>
                     </form>
 
-                    <div className="mt-6">
-                        <button
-                            type="button"
-                            onClick={handleDemoLogin}
-                            className="w-full btn btn-secondary py-2 text-sm font-medium flex items-center justify-center gap-2"
-                        >
-                            <BsWallet2 className="h-4 w-4" />
-                            Use Demo Credentials
-                        </button>
-                    </div>
+
 
                     <div className="mt-6 text-center">
                         <p className="text-sm text-gray-600 dark:text-gray-400">
