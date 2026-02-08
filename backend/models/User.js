@@ -19,7 +19,8 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please provide a password'],
         minlength: 6,
-        select: false, // Don't include password in queries by default
+        select: false,
+        trim: true,
     },
     phone: {
         type: String,
