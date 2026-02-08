@@ -199,6 +199,8 @@ expense-subscription-manager/
 2.  **MongoDB Connection Error**
     *   If you see `Could not connect to any servers in your MongoDB Atlas cluster...`, your IP address might not be whitelisted.
     *   Go to MongoDB Atlas -> Network Access -> Add IP Address -> Add Current IP Address.
+    *   **For Render Deployment**: Render uses dynamic IPs. You must allow access from **Anywhere**.
+        *   Click "Add IP Address" -> Select "Allow Access from Anywhere" (`0.0.0.0/0`) -> Confirm.
 
 3.  **Login Failed / Demo Credentials Not Working**
     *   If "Demo Credentials" fail, it means the user `test@example.com` does not exist in your database.
