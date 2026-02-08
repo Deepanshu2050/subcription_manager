@@ -85,7 +85,25 @@ const login = async (req, res) => {
         // Check for user (include password for comparison)
         const user = await User.findOne({ email }).select('+password');
 
-        if (user && (await user.comparePassword(password))) {
+        if (!user) {
+            console.log(`❌ Login failed: User not found for email: ${email}`);
+            return res.status(401).json({
+                success: false,
+                message: 'Invalid email or password',
+            });
+        }
+
+        const isMatch = await user.comparePassword(password);
+        if (!isMatch) {
+            console.log(`❌ Login failed: Password mismatch for user: ${email}`);
+            return res.status(401).json({
+                success: false,
+                message: 'Invalid email or password',
+            });
+        }
+
+        if (user && isMatch) {
+            console.log(`✅ Login successful for user: ${email}`);
             res.json({
                 success: true,
                 data: {
@@ -95,11 +113,6 @@ const login = async (req, res) => {
                     phone: user.phone,
                     token: generateToken(user._id),
                 },
-            });
-        } else {
-            res.status(401).json({
-                success: false,
-                message: 'Invalid email or password',
             });
         }
     } catch (error) {
