@@ -68,13 +68,8 @@ const Dashboard = () => {
             const upcoming = await subscriptionAPI.getUpcoming(7);
 
             // Fetch budget status
-            try {
-                const budgetResponse = await budgetAPI.getCurrentStatus();
-                setBudgetStatus(budgetResponse.data.data);
-            } catch (err) {
-                // No active budget
-                setBudgetStatus(null);
-            }
+            const budgetResponse = await budgetAPI.getCurrentStatus();
+            setBudgetStatus(budgetResponse.data.data);
 
             // Fetch recent expenses
             const recentResponse = await expenseAPI.getAll({ sortBy: '-date' });
@@ -194,16 +189,16 @@ const Dashboard = () => {
                                     </p>
                                 </div>
                                 <div className={`p-3 rounded-lg ${budgetStatus.alertLevel === 'critical'
-                                        ? 'bg-red-100 dark:bg-red-900'
-                                        : budgetStatus.alertLevel === 'warning'
-                                            ? 'bg-yellow-100 dark:bg-yellow-900'
-                                            : 'bg-blue-100 dark:bg-blue-900'
+                                    ? 'bg-red-100 dark:bg-red-900'
+                                    : budgetStatus.alertLevel === 'warning'
+                                        ? 'bg-yellow-100 dark:bg-yellow-900'
+                                        : 'bg-blue-100 dark:bg-blue-900'
                                     }`}>
                                     <FiTrendingUp className={`h-6 w-6 ${budgetStatus.alertLevel === 'critical'
-                                            ? 'text-red-600 dark:text-red-400'
-                                            : budgetStatus.alertLevel === 'warning'
-                                                ? 'text-yellow-600 dark:text-yellow-400'
-                                                : 'text-blue-600 dark:text-blue-400'
+                                        ? 'text-red-600 dark:text-red-400'
+                                        : budgetStatus.alertLevel === 'warning'
+                                            ? 'text-yellow-600 dark:text-yellow-400'
+                                            : 'text-blue-600 dark:text-blue-400'
                                         }`} />
                                 </div>
                             </div>

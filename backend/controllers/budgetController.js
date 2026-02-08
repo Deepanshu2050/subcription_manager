@@ -226,8 +226,9 @@ const getCurrentBudgetStatus = async (req, res) => {
         });
 
         if (!budget) {
-            return res.status(404).json({
-                success: false,
+            return res.json({
+                success: true,
+                data: null,
                 message: 'No active budget found for current period',
             });
         }
