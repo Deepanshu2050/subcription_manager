@@ -6,17 +6,17 @@ A production-ready MERN stack application for tracking expenses, managing subscr
 ![Node](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)
 ![React](https://img.shields.io/badge/react-18.2.0-blue.svg)
 
-## Features
+## 🎯 Features
 
 ### Core Features
-- **User Authentication** - Secure JWT-based authentication with password hashing
-- **Expense Management** - Track expenses with categories, dates, and payment methods
-- **Subscription Tracking** - Manage recurring subscriptions with renewal reminders
-- **Budget Management** - Set monthly/yearly budgets with smart alerts
-- **Dashboard** - Beautiful visualizations with charts and analytics
-- **Email Notifications** - Automated alerts for budgets and subscription renewals
-- **CSV Export** - Export expense data for external analysis
-- **Dark Mode** - Full dark mode support
+- ✅ **User Authentication** - Secure JWT-based authentication with password hashing
+- 💰 **Expense Management** - Track expenses with categories, dates, and payment methods
+- 📊 **Subscription Tracking** - Manage recurring subscriptions with renewal reminders
+- 💵 **Budget Management** - Set monthly/yearly budgets with smart alerts
+- 📈 **Dashboard** - Beautiful visualizations with charts and analytics
+- 📧 **Email Notifications** - Automated alerts for budgets and subscription renewals
+- 📥 **CSV Export** - Export expense data for external analysis
+- 🌙 **Dark Mode** - Full dark mode support
 
 ### Tech Stack
 
@@ -36,7 +36,7 @@ A production-ready MERN stack application for tracking expenses, managing subscr
 - Nodemailer for emails
 - node-cron for scheduled tasks
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 expense-subscription-manager/
@@ -95,7 +95,7 @@ expense-subscription-manager/
 └── README.md
 ```
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -187,7 +187,7 @@ expense-subscription-manager/
    
    Open your browser and navigate to http://localhost:3000
 
-## Troubleshooting
+## 🔧 Troubleshooting
 
 ### Common Issues
 
@@ -206,7 +206,7 @@ expense-subscription-manager/
     *   If "Demo Credentials" fail, it means the user `test@example.com` does not exist in your database.
     *   **Solution**: Use the **Sign Up** page to create a new account. You can then log in with those credentials.
 
-## API Documentation
+## 📖 API Documentation
 
 ### Authentication Endpoints
 
@@ -253,7 +253,7 @@ GET    /api/budgets/current/status (Protected)
 GET    /api/budgets/check-alerts (Protected)
 ```
 
-## Testing the Application
+## 🧪 Testing the Application
 
 ### Create a Test User
 
@@ -305,7 +305,7 @@ curl -X POST http://localhost:5000/api/budgets \
   }'
 ```
 
-## Automated Notifications
+## 🔔 Automated Notifications
 
 The application runs two cron jobs:
 
@@ -317,7 +317,7 @@ The application runs two cron jobs:
    - Monitors budget spending
    - Sends alerts at 80% and 100% thresholds
 
-## Features in Detail
+## 🎨 Features in Detail
 
 ### Expense Categories
 - Food & Dining
@@ -346,7 +346,7 @@ The application runs two cron jobs:
 - Warning: 80% of budget used
 - Critical: 100% of budget used
 
-## Deployment
+## 🚢 Deployment
 
 ### Backend Deployment (Render)
 
@@ -365,7 +365,7 @@ The application runs two cron jobs:
 4. Follow the prompts
 5. Set environment variable: `VITE_API_URL=your-backend-url/api`
 
-## Development
+## 🛠️ Development
 
 ### Code Structure
 
@@ -388,19 +388,19 @@ The application runs two cron jobs:
 - Dark mode support
 - Clean code with comments
 
-## License
+## 📝 License
 
 This project is licensed under the MIT License.
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Support
+## 📧 Support
 
 For support, email your-email@example.com or create an issue in the repository.
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 - Built with MERN Stack
 - UI inspired by modern finance apps
@@ -409,4 +409,4 @@ For support, email your-email@example.com or create an issue in the repository.
 
 ---
 
-**Happy Expense Tracking!**
+**Happy Expense Tracking! 💰📊**
